@@ -1,5 +1,5 @@
 {
 
     "username": "blah",
-    "run_list": [ "recipe[bootstrap-linux::default]" ]
+    "run_list": [ "recipe[bootstrap-linux::user]" ]
 }

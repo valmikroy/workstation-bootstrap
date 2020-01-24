@@ -1,11 +1,17 @@
 export DEBIAN_FRONTEND=noninteractive
 sudo apt-add-repository -y ppa:rael-gc/rvm
 sudo apt-get update
-sudo apt-get install build-essential
-sudo apt-get install rvm
+sudo apt-get install build-essential -y 
+sudo apt-get install rvm -y 
+curl -L https://omnitruck.chef.io/install.sh | sudo bash
 
-rvm install 2.7
-rvm use 2.7 --default
-source ~/.rvm/scripts/rvm
+echo 'source "/etc/profile.d/rvm.sh"' >> ~/.bashrc
 
-gem install chef berkshelf
+
+
+
+#rvm install ruby
+#rvm use 2.7 --default
+#source ~/.rvm/scripts/rvm
+#gem install chef berkshelf 
+#sudo chef-solo   -c solo.rb -j first_run.json

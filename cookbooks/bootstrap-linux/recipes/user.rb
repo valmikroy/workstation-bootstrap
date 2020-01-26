@@ -20,7 +20,7 @@ sudo node.normal['username']  do
   nopasswd  true
 end
 
-ssh_authorize_key  node.normal['username'] do
-  key  node.normal['user_pub_key']
-  user node.normal['username']
-end
+#ssh_authorize_key  node.normal['username'] do
+#  key  node.normal['user_pub_key']
+#  user node.normal['username']
+#end

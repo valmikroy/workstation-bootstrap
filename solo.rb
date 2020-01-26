@@ -1,1 +1,1 @@
-cookbook_path ENV['HOME'] + '/.berkshelf/cookbooks'
+cookbook_path [ '.', '..', ENV['HOME'] + '/.berkshelf/cookbooks' ]

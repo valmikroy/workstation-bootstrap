@@ -1,6 +1,0 @@
-{
-
-    "username": "blah",
-    "user_pub_key": "ssh pub key",
-    "run_list": [ "recipe[bootstrap-linux::user]" ]
-}

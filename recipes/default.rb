@@ -6,6 +6,7 @@
 # All rights reserved - Do Not Redistribute
 
 
+motd '99-mymotd'
 
 
 user node.normal['username']   do

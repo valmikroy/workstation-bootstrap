@@ -1,5 +1,0 @@
-source "https://supermarket.chef.io"
-metadata
-
-cookbook 'sudo', '~> 5.4.5'
-cookbook 'ssh_authorized_keys'

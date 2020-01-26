@@ -1,6 +1,4 @@
 {
-   "normal": {   
-	"username": "blah"
-   },	   
+   "username": "blah",
    "run_list": [ "recipe[workstation-bootstrap::default]" ]
 }

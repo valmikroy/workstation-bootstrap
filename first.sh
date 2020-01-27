@@ -14,4 +14,4 @@ fi
 
 sudo /opt/chef/embedded/bin/berks  vendor /tmp/chef-solo/cookbooks
 sudo chef-client --local-mode   -c solo.rb  -j first.json
-rm -rf  /tmp/chef-solo
+sudo rm -rf  /tmp/chef-solo

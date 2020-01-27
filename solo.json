@@ -1,4 +1,5 @@
 {
    "username": "blah",
+   "user_pub_key": "MY publick hey ",
    "run_list": [ "recipe[workstation-bootstrap::default]" ]
 }

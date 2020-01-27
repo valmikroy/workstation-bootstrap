@@ -7,5 +7,10 @@
 # Copyright 2020, Valmik Roy
 # All rights reserved - Do Not Redistribute
 
+
+
+
+include_recipe "workstation-bootstrap::files"
 include_recipe "workstation-bootstrap::user"
 include_recipe "workstation-bootstrap::tmux"
+include_recipe "workstation-bootstrap::bash"

@@ -31,8 +31,7 @@ platforms:
 suites:
 - name: default
   run_list:
-          - recipe[workstation-bootstrap::user]
-          - recipe[workstation-bootstrap::tmux]
+          - recipe[workstation-bootstrap::default]
   attributes:           
       username: "blah"
       user_pub_key: "AAAAB3NzaC1yc2EAAAADAQABAAABAQCqmAXezK7ct683mFc7t5wbbCNIocGyAV9zhf2llCgsUrZSdokx7AXJuFokYSM9Venq/biDQuOJ+/guMiNkZU2OE1dMA63otGOiBWqBhfETbem7mLI9etwEHu+MLzCFUdjOWOTzD9jrH+Zeh8jFqyu2v9DNWMjSqDBElrtC9mOPLpt/5IF3NIEud53BMsyksL3RBl1qndPfNPf6+mV4SVTYkPrzFt6d/rbv2SUTLpRxS+esni0k8i3LGMBTzB5awGfbZVsS6tbrGikuwUzQMN6XScsRmrxksVaJHRKWiNCh5FmS7WPKx1aPojPQK1K9rx882MeJcD6I1sZaedgnZ8pr"

@@ -13,3 +13,11 @@ end
 describe file('/home/blah/.tmux.conf') do
 	  its(:size) { should_not eq 0 }
 end
+
+describe file('/home/blah/.bash_profile.d/github.source') do
+	  its(:size) { should_not eq 0 }
+end
+
+describe file('/home/blah/.bash_profile.d/tmux.source') do
+	  its(:size) { should_not eq 0 }
+end

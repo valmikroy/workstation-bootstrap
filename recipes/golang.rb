@@ -4,7 +4,7 @@ apt_repository 'golang' do
 end
 
 
-package 'golang-go'
+package 'golang-1.10'
 
 
 

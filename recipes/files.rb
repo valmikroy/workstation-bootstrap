@@ -13,3 +13,8 @@ cookbook_file 'bash_vim' do
   path "#{node['tmp_path']}/vim.source"
 end
 
+cookbook_file 'bash_golang' do
+  source 'bash/golang.source'
+  path "#{node['tmp_path']}/golang.source"
+end
+

@@ -8,3 +8,8 @@ cookbook_file 'bash_github' do
   path "#{node['tmp_path']}/github.source"
 end
 
+cookbook_file 'bash_vim' do
+  source 'bash/vim.source'
+  path "#{node['tmp_path']}/vim.source"
+end
+

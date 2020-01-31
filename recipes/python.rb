@@ -9,7 +9,7 @@ end
 python_virtualenv "#{node['user_home']}/env/python3" do
 	 user node['username']
 #	 python 'python3'
-#     setuptools_version false
+     setuptools_version false
 #     pip_version false
 #     wheel_version false
 	 action :create

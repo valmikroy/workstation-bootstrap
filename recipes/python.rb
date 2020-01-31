@@ -1,12 +1,12 @@
 #package 'python3-dev'
 #package 'python3-pip'
 
-apt_repository 'python' do
-    uri        'ppa:jonathonf/python-3.6'
-    components ['python']
-end
+#apt_repository 'python' do
+#    uri        'ppa:jonathonf/python-3.6'
+#    components ['python']
+#end
 python_runtime 'python3' do
-	version '3.6'
+	version '3.5'
 	action :install
 end
 
@@ -38,4 +38,3 @@ python_package 'pynvim'
 #  EOH
 #  not_if { ::File.exist?("#{node['user_home']}/env/python3/bin/python") }
 #end
-

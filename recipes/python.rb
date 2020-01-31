@@ -4,6 +4,7 @@
 python_runtime 'python3' do
 	version '3.5'
 	action :install
+    options :system, dev_package: false
 end
 
 python_runtime_options 'python3' do

@@ -14,4 +14,5 @@ end
 
 python_package 'pynvim' do
     python 'python3'
+    python_runtime  "#{node['user_home']}/env/python3/bin/python"
 end

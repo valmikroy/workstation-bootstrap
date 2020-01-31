@@ -8,5 +8,6 @@ version          '0.1.0'
 
 depends 'motd'
 depends 'bash'
+depends 'poise-python'
 depends 'ssh_authorized_keys'
 

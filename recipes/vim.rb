@@ -1,6 +1,6 @@
 
 
-script 'extract_module' do
+script 'neovim system settings update' do
   interpreter "bash"
   code <<-EOH
 	 sudo add-apt-repository ppa:neovim-ppa/stable

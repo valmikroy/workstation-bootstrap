@@ -15,3 +15,13 @@ end
 #python_package 'pynvim' do
 #    virtualenv "#{node['user_home']}/env/python3"
 #end
+
+script 'install pips' do
+  interpreter "bash"
+  code <<-EOH
+   "#{node['user_home']}/env/python3/bin/pip install setuptools"
+   "#{node['user_home']}/env/python3/bin/pip install pynvim"
+  EOH
+  not_if { ::File.exist?('/usr/bin/nvim') }
+end
+

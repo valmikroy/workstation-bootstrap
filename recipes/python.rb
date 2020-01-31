@@ -19,6 +19,7 @@ end
 #	 action :create
 #end
 
+python_package 'pynvim' 
 #python_package 'pynvim' do
 #    virtualenv "#{node['user_home']}/env/python3"
 #end

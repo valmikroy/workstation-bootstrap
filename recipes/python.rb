@@ -6,10 +6,14 @@ python_runtime 'python3' do
 	action :install
 end
 
+python_runtime_options 'python3' do
+    version '3.5'
+end
+
 python_virtualenv "#{node['user_home']}/env/python3" do
 	 user node['username']
-#	 python 'python3'
-     setuptools_version false
+#	  python 'python3'
+#     setuptools_version false
 #     pip_version false
 #     wheel_version false
 	 action :create

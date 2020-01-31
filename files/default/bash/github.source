@@ -14,3 +14,26 @@ function _gmm {
 	git merge master
 	git stash apply
 }
+
+function _gpll {
+    git pull 
+}
+
+function _gpsh {
+    git push
+}
+
+function _gcln {
+    git clone $1
+}
+
+function _gadd {
+    git add "$@"
+}
+
+function _gmit {
+    git commit 
+}
+
+
+

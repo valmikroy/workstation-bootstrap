@@ -10,6 +10,7 @@ python_virtualenv "#{node['user_home']}/env/python3" do
 	 user node['username']
 	 python 'python3'
      setuptools_version false
+     pip_version false
 	 action :create
 end
 
@@ -20,6 +21,7 @@ end
 script 'install pips' do
   interpreter "bash"
   code <<-EOH
+   "#{node['user_home']}/env/python3/bin/python -m pip install --user --upgrade pip"
    "#{node['user_home']}/env/python3/bin/pip install setuptools"
    "#{node['user_home']}/env/python3/bin/pip install pynvim"
   EOH

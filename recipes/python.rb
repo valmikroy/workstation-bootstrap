@@ -9,10 +9,12 @@ end
 python_virtualenv "#{node['user_home']}/env/python3" do
 	 user node['username']
 	 python 'python3'
+     pip_version true
+     setuptools_version true
+
 	 action :create
 end
 
 python_package 'pynvim' do
-    python 'python3'
-    python_runtime  "#{node['user_home']}/env/python3/bin/python"
+    virtualenv "#{node['user_home']}/env/python3"
 end

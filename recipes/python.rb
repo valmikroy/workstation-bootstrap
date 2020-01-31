@@ -11,6 +11,7 @@ python_virtualenv "#{node['user_home']}/env/python3" do
 	 python 'python3'
      setuptools_version false
      pip_version false
+     wheel_version false
 	 action :create
 end
 
@@ -23,6 +24,7 @@ script 'install pips' do
   code <<-EOH
    "#{node['user_home']}/env/python3/bin/python -m pip install --user --upgrade pip"
    "#{node['user_home']}/env/python3/bin/pip install setuptools"
+   "#{node['user_home']}/env/python3/bin/pip install wheel"
    "#{node['user_home']}/env/python3/bin/pip install pynvim"
   EOH
   not_if { ::File.exist?('/usr/bin/nvim') }

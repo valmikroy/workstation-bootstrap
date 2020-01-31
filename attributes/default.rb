@@ -6,5 +6,5 @@ default['user_home'] = value_for_platform_family(
 )
 default['tmp_path'] = Chef::Config['file_cache_path']
 #default['tmp_path'] = '/tmp'
-node['poise-python']['install_python2'] = true
-node['poise-python']['install_python3'] = true
+default['poise-python']['install_python2'] = true
+default['poise-python']['install_python3'] = true

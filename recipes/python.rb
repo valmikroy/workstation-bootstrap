@@ -2,7 +2,7 @@
 #package 'python3-pip'
 
 python_runtime 'python3' do
-	version '3.5'
+	version '3.6.1'
 	action :install
 end
 

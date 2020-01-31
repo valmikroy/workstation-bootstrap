@@ -2,11 +2,11 @@
 #package 'python3-pip'
 
 apt_repository 'python' do
-    uri        'ppa:deadsnakes/ppa'
+    uri        'ppa:jonathonf/python-3.6'
     components ['python']
 end
 python_runtime 'python3' do
-	version '3.8'
+	version '3.6'
 	action :install
 end
 

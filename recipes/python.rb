@@ -27,6 +27,6 @@ script 'install pips' do
    "#{node['user_home']}/env/python3/bin/pip install wheel"
    "#{node['user_home']}/env/python3/bin/pip install pynvim"
   EOH
-  not_if { ::File.exist?('/usr/bin/nvim') }
+  not_if { ::File.exist?("#{node['user_home']}/env/python3/bin/python") }
 end
 

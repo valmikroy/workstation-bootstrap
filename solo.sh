@@ -13,3 +13,4 @@ fi
 
 /usr/bin/python3.8 -m pip install --user virtualenv
 /usr/bin/python3.8 -m venv $HOME/.config/nvim/env
+ $HOME/.config/nvim/env/bin/pip install neovim

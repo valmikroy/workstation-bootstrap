@@ -33,11 +33,3 @@ package 'python3-pip'
 #    virtualenv "#{node['user_home']}/env/python3"
 #end
 
-script 'install pips' do
-  interpreter "bash"
-  code <<-EOH
-   "/usr/bin/python3.8 -m pip install --user virtualenv"
-   "/usr/bin/python3.8 -m venv #{node['user_home']}/env"
-  EOH
-  not_if { ::File.exist?("#{node['user_home']}/env/pyvenv.cfg") }
-end

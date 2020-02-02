@@ -9,7 +9,7 @@ script 'golang install' do
 
 
   EOH
-  not_if { ::File.exist?("/usr/bin/nvim") }
+  not_if { ::File.exist?("/usr/local/go/bin/go") }
 end
 
 if ::File.exist?("#{node['tmp_path']}/golang.source")

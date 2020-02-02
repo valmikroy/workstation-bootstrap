@@ -10,3 +10,6 @@ then
 else
         chown -R $SUDO_USER:$SUDO_USER  $HOME
 fi	
+
+/usr/bin/python3.8 -m pip install --user virtualenv
+/usr/bin/python3.8 -m venv $HOME/env

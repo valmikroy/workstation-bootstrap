@@ -8,7 +8,6 @@
 # All rights reserved - Do Not Redistribute
 #
 
-package "keychain"
 
 user node['username'] do
   manage_home true

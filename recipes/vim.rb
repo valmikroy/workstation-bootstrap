@@ -14,6 +14,7 @@ script 'neovim system settings update' do
 	 sudo update-alternatives --install /usr/bin/editor editor /usr/bin/nvim 60
 	 sudo update-alternatives --config editor
   EOH
+  only_if { ::File.exist?("/usr/bin/nvim") }
 end
 
 

@@ -38,5 +38,5 @@ script 'install pips' do
    "python3.8 -m pip install --user virtualenv"
    "python3.8 -m venv #{node['user_home']}/env"
   EOH
-  not_if { ::File.exist?("/usr/bin/python3.8") }
+  only_if { ::File.exist?("/usr/bin/python3.8") }
 end

@@ -1,0 +1,3 @@
+- Move neovim python env inside recipe 
+- install RVM and create ruby providers
+- resolve neovim depdencies displayed by :checkhealth

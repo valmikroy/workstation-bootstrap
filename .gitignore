@@ -1,4 +1,3 @@
-*.pid
-*.out
-*.lock
-.kitchen
+chef_guid
+local-mode-cache
+solo.json

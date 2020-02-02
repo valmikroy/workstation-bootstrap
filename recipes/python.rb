@@ -36,8 +36,8 @@ package 'python3-pip'
 script 'install pips' do
   interpreter "bash"
   code <<-EOH
-   "python3.8 -m pip install --user virtualenv"
-   "python3.8 -m venv #{node['user_home']}/env"
+   "/usr/bin/python3.8 -m pip install --user virtualenv"
+   "/usr/bin/python3.8 -m venv #{node['user_home']}/env"
   EOH
-  only_if { ::File.exist?("/usr/bin/python3.8") }
+  not_if { ::File.exist?("#{node['user_home']}/env/pyvenv.cfg") }
 end

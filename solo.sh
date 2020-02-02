@@ -12,4 +12,4 @@ else
 fi	
 
 /usr/bin/python3.8 -m pip install --user virtualenv
-/usr/bin/python3.8 -m venv $HOME/env
+/usr/bin/python3.8 -m venv $HOME/.config/nvim/env

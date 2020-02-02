@@ -6,6 +6,9 @@
 #
 # Copyright 2020, Valmik Roy
 # All rights reserved - Do Not Redistribute
+#
+
+package "keychain"
 
 user node['username'] do
   manage_home true

@@ -1,11 +1,11 @@
 export GITHUB_URL=https://git-aws.internal.justin.tv/
 
-function _gchktrack {
+function __gichktrack {
 	git checkout --track origin/${1}
 }
 
 
-function _gmm {
+function __gimm {
 	BRANCH=`git branch | grep -e '^*' | awk '{print $2}'`
 	git stash
 	git checkout master
@@ -15,25 +15,28 @@ function _gmm {
 	git stash apply
 }
 
-function _gpll {
+function __gipll {
     git pull 
 }
 
-function _gpsh {
+function __gipsh {
     git push
 }
 
-function _gcln {
+function __gicln {
     git clone $1
 }
 
-function _gadd {
+function __giadd {
     git add "$@"
 }
 
-function _gmit {
+function __gimit {
     git commit 
 }
 
+function __gistat {
+    git status
+}
 
 

@@ -11,6 +11,11 @@ chef-client --local-mode   -c solo.rb  -j solo.json
 #        chown -R $SUDO_USER:$SUDO_USER  $HOME
 #fi	
 
-/usr/bin/python3.8 -m pip install --user virtualenv
-/usr/bin/python3.8 -m venv $HOME/.config/nvim/env
- $HOME/.config/nvim/env/bin/pip install neovim
+
+
+if [ ! -f $HOME/.config/nvim/env/bin/python ]
+then
+    /usr/bin/python3.8 -m pip install --user virtualenv
+    /usr/bin/python3.8 -m venv $HOME/.config/nvim/env
+    $HOME/.config/nvim/env/bin/pip install neovim
+fi

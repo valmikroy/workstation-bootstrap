@@ -1,10 +1,24 @@
+cookbook_file 'bash_tmux' do
+  user node['username']
+  source 'bash/tmux.source'
+  path "#{node['user_home']}/.bash_profile.d/tmux.source"
+end
 
-if ::File.exist?("#{node['tmp_path']}/github.source")
+cookbook_file 'bash_github' do
+  user node['username']
+  source 'bash/github.source'
+  path "#{node['user_home']}/.bash_profile.d/github.source"
+end
 
-  bash_profile 'github.source' do
-    user node['username']
-    content  IO.read("#{node['tmp_path']}/github.source")
-  end
+cookbook_file 'bash_vim' do
+  user node['username']
+  source 'bash/vim.source'
+  path "#{node['user_home']}/.bash_profile.d/vim.source"
+end
 
+cookbook_file 'bash_golang' do
+  user node['username']
+  source 'bash/golang.source'
+  path "#{node['user_home']}/.bash_profile.d/golang.source"
 end
 

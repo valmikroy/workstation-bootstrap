@@ -242,3 +242,8 @@ nmap <S-Tab> :bprevious<CR>
 """ Custom
 noremap <Leader>ww :update<CR>
 noremap <Leader>tt :GoTest<CR>
+
+"paste toggle
+nnoremap <F2> :set invpaste paste?<CR>
+imap <F2> <C-O>:set invpaste paste?<CR>
+set pastetoggle=<F2>

@@ -238,3 +238,7 @@ autocmd FileType python nmap <leader>x :0,$!~/.config/nvim/env/bin/python -m yap
 nmap <silent> <leader><leader> :noh<CR>
 nmap <Tab> :bnext<CR>
 nmap <S-Tab> :bprevious<CR>
+
+""" Custom
+noremap <Leader>ww :update<CR>
+noremap <Leader>tt :GoTest<CR>

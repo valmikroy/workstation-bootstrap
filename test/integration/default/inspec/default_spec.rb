@@ -14,6 +14,8 @@ verify_files = %w(
 /home/blah/.local/share/nvim/site/autoload/plug.vim
 /home/blah/.config/nvim/UltiSnips/go.snippets
 /home/blah/.config/nvim/UltiSnips/snippets.snippets
+/home/blah/.config/nvim/plugged/vim-go/templates/hello_world.go
+/home/blah/.config/nvim/plugged/vim-go/templates/hello_world_test.go
 )
 
 

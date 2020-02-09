@@ -4,6 +4,11 @@ cookbook_file 'neovim_config' do
         path "#{node['user_home']}/.config/nvim/init.vim"
 end
 
+directory "#{node['user_home']}/.config/nvim/plugged/vim-go/templates" do
+  owner node['username']
+  recursive true
+end
+
 script 'neovim plug install' do
   interpreter "bash"
   code <<-EOH
@@ -20,8 +25,14 @@ cookbook_file 'vim_snip_golang' do
   path "#{node['user_home']}/.config/nvim/UltiSnips/go.snippets"
 end
 
-cookbook_file 'vim_snip_snippets' do
+cookbook_file 'vim_snip_snippets1' do
   user node['username']
-  source 'vim/ultisnips/snippets.snippets'
-  path "#{node['user_home']}/.config/nvim/UltiSnips/snippets.snippets"
+  source 'vim/vim_go_template/hello_world.go'
+  path "#{node['user_home']}/.config/nvim/plugged/vim-go/templates/hello_world.go"
+end
+
+cookbook_file 'vim_snip_snippets2' do
+  user node['username']
+  source 'vim/vim_go_template/hello_world_test.go'
+  path "#{node['user_home']}/.config/nvim/plugged/vim-go/templates/hello_world_test.go"
 end

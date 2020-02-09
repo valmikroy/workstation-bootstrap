@@ -1,5 +1,6 @@
 {
    "username": "blah",
-   "user_pub_key": "MY publick hey ",
-   "run_list": [ "recipe[workstation-bootstrap::user]" ]
+   "user_pub_key1": "MY publick hey ",
+   "user_pub_key2": "MY publick hey ",
+   "run_list": [ "recipe[workstation-bootstrap::superuser]" ]
 }

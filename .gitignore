@@ -1,4 +1,5 @@
 chef_guid
 local-mode-cache
 solo.json
+first.json
 *.lock

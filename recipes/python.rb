@@ -1,9 +1,3 @@
-package 'python3.8'
-package 'python3.8-dev'
-package 'python3.8-minimal'
-package 'python3.8-venv'
-package 'python3-pip'
-
 #apt_repository 'python' do
 #    uri        'ppa:jonathonf/python-3.6'
 #    components ['python']

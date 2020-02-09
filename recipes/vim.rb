@@ -30,7 +30,7 @@ directory "#{node['user_home']}/.local/share/nvim/site/autoload" do
   recursive true
 end
 
-directory "#{node['user_home']}/.config/nvim/" do
+directory "#{node['user_home']}/.config/nvim/UltiSnips" do
   action :create
   recursive true
 end
@@ -46,3 +46,6 @@ script 'neovim plug install' do
          curl -fLo #{node['user_home']}/.local/share/nvim/site/autoload/plug.vim  --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   EOH
 end
+
+
+

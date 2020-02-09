@@ -8,6 +8,19 @@
 # All rights reserved - Do Not Redistribute
 #
 
+# tmux
+package 'tmux'
+
+# ssh
+package "keychain"
+
+# python 
+package 'python3.8'
+package 'python3.8-dev'
+package 'python3.8-minimal'
+package 'python3.8-venv'
+package 'python3-pip'
+
 
 user node['username'] do
   manage_home true

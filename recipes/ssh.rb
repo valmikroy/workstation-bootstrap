@@ -1,4 +1,3 @@
-package "keychain"
 
 cookbook_file 'ssh config' do
   source 'ssh/ssh_config'

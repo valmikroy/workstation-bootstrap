@@ -242,6 +242,7 @@ nmap <S-Tab> :bprevious<CR>
 """ Custom
 noremap <Leader>ww :update<CR>
 noremap <Leader>tt :GoTest<CR>
+noremap <Leader>rr :GoRun<CR>
 
 "paste toggle
 nnoremap <F2> :set invpaste paste?<CR>

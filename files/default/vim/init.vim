@@ -243,6 +243,7 @@ nmap <S-Tab> :bprevious<CR>
 noremap <Leader>ww :update<CR>
 noremap <Leader>tt :GoTest<CR>
 noremap <Leader>rr :GoRun<CR>
+nnoremap <Leader>vr :source $MYVIMRC<CR>
 
 "paste toggle
 nnoremap <F2> :set invpaste paste?<CR>

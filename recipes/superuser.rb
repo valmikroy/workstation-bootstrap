@@ -11,6 +11,9 @@
 # tmux
 package 'tmux'
 
+# ctags
+package "exuberant-ctags"
+
 # ssh
 package "keychain"
 

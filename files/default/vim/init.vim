@@ -63,7 +63,8 @@ let g:python3_host_prog = expand('~/.config/nvim/env/bin/python')
 
 """ Coloring
 syntax on
-color dracula
+"color dracula
+colorscheme slate
 highlight Pmenu guibg=white guifg=black gui=bold
 highlight Comment gui=bold
 highlight Normal gui=none
@@ -207,45 +208,70 @@ function! ColorZazen()
     IndentLinesEnable
 endfunction
 
+
+
+
+
 """ Custom Mappings
 
 let mapleader=","
+" NERD Tree bindings
 nmap <leader>q :NERDTreeToggle<CR>
 nmap \ <leader>q
-nmap <leader>w :TagbarToggle<CR>
-nmap <leader>ee :Colors<CR>
-nmap <leader>ea :AirlineTheme 
-nmap <leader>e1 :call ColorDracula()<CR>
-nmap <leader>e2 :call ColorSeoul256()<CR>
-nmap <leader>e3 :call ColorForgotten()<CR>
-nmap <leader>e4 :call ColorZazen()<CR>
+nmap <leader>nf :NERDTreeFocus<CR>
+
+" Vim reload config
 nmap <leader>r :so ~/.config/nvim/init.vim<CR>
-nmap <leader>t :call TrimWhitespace()<CR>
-xmap <leader>a gaip*
-nmap <leader>a gaip*
+
+" Vim save file
+noremap <Leader>ww :update<CR>
+
+" Vim opens a shell terminal
 nmap <leader>s <C-w>s<C-w>j:terminal<CR>
 nmap <leader>vs <C-w>v<C-w>l:terminal<CR>
-nmap <leader>d <Plug>(pydocstring)
-nmap <leader>f :Files<CR>
+
+" Focus mode
 nmap <leader>g :Goyo<CR>
-nmap <leader>h :RainbowParentheses!!<CR>
-nmap <leader>j :set filetype=journal<CR>
-nmap <leader>k :ColorToggle<CR>
+
+" Focus on code blocks
+let g:limelight_conceal_ctermfg = 245
+let g:limelight_conceal_guifg = '#8a8a8a'
+highlight Normal guifg=White guibg=grey15
+highlight CursorLine cterm=underline ctermbg=12 guibg=Grey20
+
+set cursorline
 nmap <leader>l :Limelight!!<CR>
 xmap <leader>l :Limelight!!<CR>
-autocmd FileType python nmap <leader>x :0,$!~/.config/nvim/env/bin/python -m yapf<CR>
-"nmap <leader>n :HackerNews best<CR>J
-nmap <silent> <leader><leader> :noh<CR>
-nmap <Tab> :bnext<CR>
-nmap <S-Tab> :bprevious<CR>
-
-""" Custom
-noremap <Leader>ww :update<CR>
-noremap <Leader>tt :GoTest<CR>
-noremap <Leader>rr :GoRun<CR>
-nnoremap <Leader>vr :source $MYVIMRC<CR>
 
 "paste toggle
 nnoremap <F2> :set invpaste paste?<CR>
 imap <F2> <C-O>:set invpaste paste?<CR>
 set pastetoggle=<F2>
+
+" vim-go mapping 
+noremap <Leader>tt :GoTest<CR>
+noremap <Leader>rr :GoRun<CR>
+
+
+
+" pre-installed
+nmap <leader>w :TagbarToggle<CR>
+nmap <leader>ee :Colors<CR>
+nmap <leader>ea :AirlineTheme
+nmap <leader>e1 :call ColorDracula()<CR>
+nmap <leader>e2 :call ColorSeoul256()<CR>
+nmap <leader>e3 :call ColorForgotten()<CR>
+nmap <leader>e4 :call ColorZazen()<CR>
+nmap <leader>t :call TrimWhitespace()<CR>
+xmap <leader>a gaip*
+nmap <leader>a gaip*
+nmap <leader>d <Plug>(pydocstring)
+nmap <leader>f :Files<CR>
+nmap <leader>h :RainbowParentheses!!<CR>
+nmap <leader>j :set filetype=journal<CR>
+nmap <leader>k :ColorToggle<CR>
+autocmd FileType python nmap <leader>x :0,$!~/.config/nvim/env/bin/python -m yapf<CR>
+nmap <silent> <leader><leader> :noh<CR>
+nmap <Tab> :bnext<CR>
+nmap <S-Tab> :bprevious<CR>
+

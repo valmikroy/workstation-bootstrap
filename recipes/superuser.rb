@@ -90,6 +90,7 @@ hfolder.each do |dir|
     action :create
     recursive true
     owner node['username']
+    group node['username']
   end
 
 end

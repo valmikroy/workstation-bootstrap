@@ -242,6 +242,9 @@ let g:limelight_conceal_guifg = '#8a8a8a'
 nmap <leader>l :Limelight!!<CR>
 xmap <leader>l :Limelight!!<CR>
 
+" highlight whitespace
+highlight NonText       cterm=bold ctermfg=12 gui=bold guifg=#253f3f guibg=none
+
 "paste toggle
 nnoremap <F2> :set invpaste paste?<CR>
 imap <F2> <C-O>:set invpaste paste?<CR>

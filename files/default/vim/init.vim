@@ -235,7 +235,7 @@ nmap <leader>g :Goyo<CR>
 
 " vim-limelight to create a focus on the code block
 highlight Normal guifg=White guibg=grey15
-highlight CursorLine cterm=underline ctermbg=12 guibg=Grey20
+highlight CursorLine cterm=underline ctermbg=12 guibg=Grey10
 set cursorline
 let g:limelight_conceal_ctermfg = 245
 let g:limelight_conceal_guifg = '#8a8a8a'

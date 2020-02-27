@@ -68,6 +68,13 @@ snippet _ir  "error if condition"
 	${0}
 endsnippet
 
+snippet _irr  "error if condition"
+	if err := ${1:myfunc()}; err != nil {
+		return err
+	}
+	${0}
+endsnippet
+
 snippet _forr  "for loop with range"
 	for ${1:e} := range ${2:collection} {
 	${0:${VISUAL}}

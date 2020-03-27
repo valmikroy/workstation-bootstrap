@@ -55,6 +55,7 @@ Plug 'dkarter/bullets.vim'
 "
 " Go
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'ctrlpvim/ctrlp.vim'
 
 call plug#end()
 

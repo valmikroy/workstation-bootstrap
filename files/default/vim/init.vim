@@ -256,6 +256,12 @@ set pastetoggle=<F2>
 noremap <Leader>tt :GoTest<CR>
 noremap <Leader>rr :GoRun<CR>
 
+" fold & unfold
+set foldmethod=syntax
+set foldnestmax=1
+set nofoldenable
+nmap <leader>ef :set foldenable<CR>
+nmap <leader>df :set nofoldenable<CR>
 
 
 " pre-installed

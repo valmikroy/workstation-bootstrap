@@ -233,6 +233,8 @@ nmap <leader>s <C-w>s<C-w>j:terminal<CR>
 nmap <leader>vs <C-w>v<C-w>l:terminal<CR>
 
 " Focus mode
+let g:goyo_width=120
+let g:goyo_height=90
 nmap <leader>g :Goyo<CR>
 
 " vim-limelight to create a focus on the code block

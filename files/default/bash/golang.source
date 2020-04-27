@@ -3,3 +3,10 @@ export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 export GO111MODULE=on
 export GOPRIVATE="github.com/valmikroy"
+
+
+which gopls > /dev/null
+if [ $? -eq 1 ]
+then
+  go get golang.org/x/tools/gopls@latest
+fi

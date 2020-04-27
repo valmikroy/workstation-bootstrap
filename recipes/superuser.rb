@@ -24,7 +24,7 @@ package 'python3.8-minimal'
 package 'python3.8-venv'
 package 'python3-pip'
 
-package 'nodejs'
+#package 'nodejs'
 
 script 'neovim install and system settings update' do
   interpreter "bash"

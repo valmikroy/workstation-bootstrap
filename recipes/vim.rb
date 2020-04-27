@@ -1,5 +1,6 @@
 cookbook_file 'neovim_config' do
         user node['username']
+        group node['username']
         source 'vim/init.vim'
         path "#{node['user_home']}/.config/nvim/init.vim"
 end
@@ -9,9 +10,15 @@ end
 #  owner node['username']
 #  recursive true
 #end
+directory "#{node['user_home']}/.config/coc" do
+  owner node['username']
+  group node['username']
+  recursive true
+end
 
 directory "#{node['user_home']}/.config/coc/ultisnips" do
   owner node['username']
+  group node['username']
   recursive true
 end
 
@@ -27,18 +34,21 @@ end
 
 cookbook_file 'vim_snip_golang' do
   user node['username']
+  group node['username']
   source 'vim/ultisnips/go.snippets'
   path "#{node['user_home']}/.config/nvim/UltiSnips/go.snippets"
 end
 
 cookbook_file 'vim_snip_golang' do
   user node['username']
+  group node['username']
   source 'vim/ultisnips/go.snippets'
   path "#{node['user_home']}/.config/coc/ultisnips/go.snippets"
 end
 
 cookbook_file 'coc-settings' do
   user node['username']
+  group node['username']
   source 'vim/coc-settings.json'
   path "#{node['user_home']}/.config/nvim/coc-settings.json"
 end

@@ -2,7 +2,7 @@ export EDITOR='/usr/bin/nvim'
 
 
 if [ ! -x "$(command -v npm)" ]; then
-     sudo apt-get install npm
+     curl -sL install-node.now.sh | sudo bash -
 fi
 
 mkdir -p ~/.config/coc/extensions

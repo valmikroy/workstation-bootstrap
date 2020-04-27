@@ -1,1 +1,11 @@
 export EDITOR='/usr/bin/nvim'
+
+mkdir -p ~/.config/coc/extensions
+cd ~/.config/coc/extensions
+if [ ! -f package.json ]
+then
+  echo '{"dependencies":{}}'> package.json
+fi
+
+npm install coc-snippets --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+

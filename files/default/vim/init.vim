@@ -262,6 +262,8 @@ set pastetoggle=<F2>
 noremap <Leader>tt :GoTest<CR>
 noremap <Leader>rr :GoRun<CR>
 let g:go_def_mapping_enabled = 0
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
 "call coc#util#install()
 "set CocInstall coc-snippets
 

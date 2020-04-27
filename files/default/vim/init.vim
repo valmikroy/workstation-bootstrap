@@ -173,6 +173,9 @@ autocmd FileType markdown setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType markdown colorscheme seoul256-light
 autocmd FileType journal setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
+
+
+
 """ Custom Functions
 
 " Trim Whitespaces
@@ -247,8 +250,8 @@ highlight CursorLine cterm=underline ctermbg=12 guibg=Grey10
 set cursorline
 let g:limelight_conceal_ctermfg = 245
 let g:limelight_conceal_guifg = '#8a8a8a'
-nmap <leader>l :Limelight!!<CR>
-xmap <leader>l :Limelight!!<CR>
+nmap <leader>lm :Limelight!!<CR>
+xmap <leader>lm :Limelight!!<CR>
 
 " highlight whitespace
 highlight NonText       cterm=bold ctermfg=12 gui=bold guifg=#253f3f guibg=none
@@ -259,11 +262,14 @@ imap <F2> <C-O>:set invpaste paste?<CR>
 set pastetoggle=<F2>
 
 " vim-go mapping 
-noremap <Leader>tt :GoTest<CR>
-noremap <Leader>rr :GoRun<CR>
-let g:go_def_mapping_enabled = 0
-let g:go_def_mode='gopls'
-let g:go_info_mode='gopls'
+
+autocmd FileType go noremap <Leader>tt :GoTest<CR>
+autocmd FileType go noremap <Leader>ll :GoLint<CR>
+autocmd FileType go noremap <Leader>ee :GoErrCheck<CR>
+autocmd FileType go noremap <Leader>rr :GoRun<CR>
+autocmd FileType go let g:go_def_mapping_enabled = 0
+autocmd FileType go let g:go_def_mode='gopls'
+autocmd FileType go let g:go_info_mode='gopls'
 "call coc#util#install()
 "set CocInstall coc-snippets
 

@@ -267,6 +267,7 @@ autocmd FileType go noremap <Leader>tt :GoTest<CR>
 autocmd FileType go noremap <Leader>ll :GoLint<CR>
 autocmd FileType go noremap <Leader>ee :GoErrCheck<CR>
 autocmd FileType go noremap <Leader>rr :GoRun<CR>
+autocmd FileType go nmap <F3> :!go run %<CR>
 autocmd FileType go let g:go_def_mapping_enabled = 0
 autocmd FileType go let g:go_def_mode='gopls'
 autocmd FileType go let g:go_info_mode='gopls'

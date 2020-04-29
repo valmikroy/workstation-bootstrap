@@ -68,7 +68,7 @@ if err != nil {
 ${0}
 endsnippet
 
-snippet _irr  "error if condition"
+snippet _irr  "error if condition with function"
 if err := ${1:myfunc()}; err != nil {
 	return err
 }
@@ -98,7 +98,7 @@ default:
 }
 endsnippet
 
-snippet _ts "composite literals"
+snippet _ts "define structure"
 type ${1:name} struct {
 	${2:attrName} ${3:attrType}
 }
@@ -110,4 +110,42 @@ endsnippet
 
 snippet _fmte "fmt errorf"
 fmt.Errorf("${1} , %v",err)
+endsnippet
+
+
+
+
+
+
+snippet _cbfilereadbyline "CB open and read file by line"
+
+//import (
+//	"bufio"
+//	"fmt"
+//	"io"
+//	"os"
+//)
+
+// openFile(logfile)
+func openFile(file string) error {
+	fd, err := os.OpenFile(file, os.O_RDONLY, os.ModePerm)
+	if err != nil {
+		return err
+	}
+	defer fd.Close()
+
+	rd := bufio.NewReader(fd)
+	for {
+		if line, err := rd.ReadString('\n'); err != nil {
+			if err == io.EOF {
+				break
+			}
+		} else {
+			//fmt.Printf(">> %s", line)
+			${1://do something here with eadh line}
+		}
+	}
+	return nil
+}
+
 endsnippet

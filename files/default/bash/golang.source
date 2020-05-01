@@ -10,3 +10,9 @@ if [ $? -eq 1 ]
 then
   go get golang.org/x/tools/gopls@latest
 fi
+
+which gotags > /dev/null
+if [ $? -eq 1 ]
+then
+  go get  github.com/jstemmer/gotags
+fi

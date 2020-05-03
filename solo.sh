@@ -20,3 +20,8 @@ then
     $HOME/.config/nvim/env/bin/pip install neovim
 
 fi
+
+vim +PlugInstall +qall
+vim +'call coc#util#install()'  +qall
+vim +'CocInstall coc-snippets'  +qall
+

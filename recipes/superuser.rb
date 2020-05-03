@@ -104,3 +104,7 @@ cookbook_file 'bash_profile' do
   source 'bash/bash_profile'
   path "#{node['user_home']}/.bash_profile"
 end
+
+
+
+include_recipe "terraform::default"

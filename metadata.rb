@@ -10,4 +10,4 @@ depends 'motd'
 depends 'bash'
 depends 'poise-python'
 depends 'ssh_authorized_keys'
-
+depends 'terraform'

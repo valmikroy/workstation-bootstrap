@@ -8,6 +8,10 @@
 # All rights reserved - Do Not Redistribute
 #
 
+
+# awscli
+package 'awscli'
+
 # tmux
 package 'tmux'
 

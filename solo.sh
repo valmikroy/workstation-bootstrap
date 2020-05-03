@@ -15,7 +15,8 @@ chef-client --local-mode   -c solo.rb  -j solo.json
 
 if [ ! -f $HOME/.config/nvim/env/bin/python ]
 then
-    /usr/bin/python3.8 -m pip install --user virtualenv
-    /usr/bin/python3.8 -m venv $HOME/.config/nvim/env
+    /usr/bin/python3 -m pip install  --user virtualenv
+    /usr/bin/python3 -m venv $HOME/.config/nvim/env
     $HOME/.config/nvim/env/bin/pip install neovim
+
 fi

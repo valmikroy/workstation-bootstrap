@@ -12,6 +12,9 @@
 # awscli
 package 'awscli'
 
+# jq
+package 'jq'
+
 # tmux
 package 'tmux'
 

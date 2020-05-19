@@ -117,7 +117,7 @@ endsnippet
 
 
 
-snippet _cbfilereadbyline "CB open and read file by line"
+snippet _cb_filereadbyline "CB open and read file by line"
 
 //import (
 //	"bufio"
@@ -127,7 +127,7 @@ snippet _cbfilereadbyline "CB open and read file by line"
 //)
 
 // openFile(logfile)
-func openFile(file string) error {
+func readFileLineByLine(file string) error {
 	fd, err := os.OpenFile(file, os.O_RDONLY, os.ModePerm)
 	if err != nil {
 		return err
@@ -138,6 +138,7 @@ func openFile(file string) error {
 	for {
 		if line, err := rd.ReadString('\n'); err != nil {
 			if err == io.EOF {
+				// add sleep here instead of break if you want to execute functionality 
 				break
 			}
 		} else {
@@ -148,4 +149,53 @@ func openFile(file string) error {
 	return nil
 }
 
+endsnippet
+
+
+
+snippet  _cb_dirwalk "Directory walk"
+
+//import (
+//	"fmt"
+//	"io/ioutil"
+//	"log"
+//)
+//
+func DirWalk(dir string) error {
+
+	files, err := ioutil.ReadDir(dir)
+	if err != nil {
+		return err
+	}
+
+	for _, f := range files {
+
+		var path string
+
+		if dir == "/" {
+			path = dir + f.Name()
+		} else {
+			path = dir + "/" + f.Name()
+		}
+
+		if f.IsDir() {
+			Walk(path)
+		}
+
+		${1://Do something here with each file}
+		fmt.Println(path)
+	}
+
+	return nil
+}
+
+//func main() {
+//
+//	err := DirWalk("/")
+//	if err != nil {
+//		log.Fatalln(err)
+//	}
+//
+//}
+//
 endsnippet

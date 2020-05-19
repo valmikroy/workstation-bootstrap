@@ -199,3 +199,33 @@ func DirWalk(dir string) error {
 //}
 //
 endsnippet
+
+snippet _cb_splitMultiLine "Various type of string splits"
+
+// Split multiline 
+for index, line := range string.Split(multiline, "\n") {
+	fmt.Println(line)
+}
+
+var multiline string =`
+blha 
+blah
+`
+endsnippet
+
+
+snippet _regexStringSplit "Regex based string split"
+//import (
+//	"regxp"
+//)
+//
+func regSplit(s string, dlim string) []string {
+	re := regexp.MustCompile(dlim)
+	slice := []string{}
+
+	for _, ss := range re.Split(s, -1) {
+		slice = append(slice, ss)
+	}
+	return slice
+}
+endsnippet
